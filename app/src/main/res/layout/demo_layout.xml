@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+
+   <include layout="@layout/header"
+        android:id="@+id/layout_header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/product_image_view"
+            android:visibility="gone"
+            android:background="@drawable/women_model"/>
+
+        <com.lnsel.ecommerceapp.imageslider.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            custom:pager_animation="Accordion"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation_span="1100"
+            android:visibility="visible"
+            android:layout_height="320dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="#ffffff"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingTop="3dp"
+                android:layout_weight=".5">
+
+                <TextView
+                    android:id="@+id/ProductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Simple black shirt"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textSize="14sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ProductSalesPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ProductName"
+                    android:text="Rs. 120.00"
+                    android:gravity="center"
+                    android:textColor="#f85534"
+                    android:textSize="13sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 150.00"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/ProductName"
+                    android:textColor="#aba5a5"
+                    android:breakStrategy="balanced"
+                    android:layout_toEndOf="@+id/ProductSalesPrice">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ProductCartDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cash on delivery available"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:layout_below="@+id/ProductSalesPrice"
+                    android:textColor="#aba5a5"
+                    android:breakStrategy="balanced">
+                </TextView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="2.5">
+
+                <ImageButton
+                    android:id="@+id/btn_wish"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:backgroundTint="#6F736F"
+                    android:background="@drawable/favourite_50" />
+
+                <ImageButton
+                    android:id="@+id/btn_share"
+                    android:layout_width="24dp"
+                    android:layout_height="28dp"
+                    android:backgroundTint="#6F736F"
+                    android:background="@drawable/arrow_50" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+        <!--select size-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#ffffff"
+            android:visibility="visible"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#cccccc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:text="Select Size : 32"/>
+
+            <com.lnsel.ecommerceapp.models.HorizontalListView
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:id="@+id/hlvCustomList_size">
+            </com.lnsel.ecommerceapp.models.HorizontalListView>
+
+        </LinearLayout>
+
+
+
+        <!--select color-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#ffffff"
+            android:visibility="visible"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#cccccc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:text="Select Color : Blue"/>
+
+            <com.lnsel.ecommerceapp.models.HorizontalListView
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:id="@+id/hlvCustomList_color">
+            </com.lnsel.ecommerceapp.models.HorizontalListView>
+
+        </LinearLayout>
+
+
+
+       <!--Description-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginBottom="60dp"
+            android:background="#ffffff"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#cccccc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:text="Item Details"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:text="Key Features"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:text="Product Description"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="ADD TO CART"
+            android:background="#303346"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_buy_now"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="BUY NOW"
+            android:background="#565d55"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

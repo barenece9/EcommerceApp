@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <include layout="@layout/header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:tint="@color/primary"
+            android:visibility="visible"
+            android:src="@drawable/logo_small"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/primary"
+            android:text="Please provide your Mobile Number to Login/Sign Up before you place the order"/>
+
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:hint="mobile"
+            android:id="@+id/etn_mobile"
+            android:textColor="@color/primary_text"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ractangle_box"
+            android:drawableLeft="@drawable/ic_phone_android_black_24dp"
+            android:drawablePadding="3dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:inputType="phone"
+            android:elevation="6dp"/>
+
+        <EditText
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="password"
+            android:id="@+id/etn_password"
+            android:textColor="@color/primary_text"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="3dp"
+            android:background="@drawable/ractangle_box"
+            android:layout_marginBottom="20dp"
+            android:textSize="15sp"
+            android:inputType="textPassword"
+            android:elevation="6dp"/>
+
+        <Button
+            android:layout_width="288dp"
+            android:layout_height="45dp"
+            android:textColor="@color/icons"
+            android:id="@+id/btn_login"
+            android:gravity="center"
+            android:text="LOGIN"
+            android:layout_marginBottom="10dp"
+            android:theme="@style/AppTheme.Button"
+            />
+
+        <CheckBox
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/secondary_text"
+            android:text="Remember login"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_forgot_password"
+            android:layout_width="280dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="#d32f2f"
+            android:text="@string/forgot_password"/>
+
+        <TextView
+            android:layout_width="280dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:id="@+id/user_registetion"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/primary"
+            android:text="@string/new_user_reg"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

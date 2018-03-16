@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/tools"
+    android:background="@color/primary"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    android:elevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:id="@+id/tv_title"
+            android:textStyle="bold"
+            android:text="Home"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:visibility="gone"
+            android:background="@drawable/logo_small"/>
+
+
+
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/cart_64"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:id="@+id/toolbar_cart"
+            android:layout_toStartOf="@+id/toolbar_wishlist" />
+
+        <ImageButton
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:id="@+id/toolbar_wishlist"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="0dp"
+
+           android:background="@drawable/like_64"/>
+
+
+
+        <TextView
+            android:id="@+id/txt_cart_count"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:textColor="@color/primary"
+            android:text="3"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:layout_marginRight="20dp"
+            android:layout_toStartOf="@+id/toolbar_wishlist"
+            android:layout_alignTop="@+id/toolbar_cart"/>
+
+        <TextView
+            android:id="@+id/txt_wish_count"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:textColor="@color/primary"
+            android:text="1"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5.5dp"
+            android:layout_alignTop="@+id/toolbar_wishlist"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

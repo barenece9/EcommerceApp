@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/nav_top"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <com.lnsel.ecommerceapp.circularimage.CircularImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tint="#f95532"
+                android:src="@drawable/ic_person_black_24dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingTop="3dp"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:text="Welcome"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_login"
+                    android:gravity="center_vertical"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:text="Log in/Sign up"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_my_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/address_24"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
+        android:textSize="12sp"
+        android:text="My Address"/>
+
+    <Button
+        android:id="@+id/btn_my_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/order_24"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="3dp"
+        android:textSize="12sp"
+        android:text="My Order"/>
+
+    <Button
+        android:id="@+id/btn_reset_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/resetpassword_24"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
+        android:text="Reset Password"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/ic_lock_power_off"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:drawablePadding="5dp"
+        android:text="Log Out"
+        android:visibility="gone"
+        android:layout_marginTop="3dp"/>
+</LinearLayout>

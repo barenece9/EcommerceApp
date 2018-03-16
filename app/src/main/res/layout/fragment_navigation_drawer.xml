@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f1ece6">
+    <LinearLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@drawable/nav_top">
+
+        <com.lnsel.ecommerceapp.circularimage.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/pf_pic"
+            android:background="@drawable/ic_account_circle_black_24dp"
+            android:backgroundTint="#ffffff"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            app:border="true"
+            app:border_color="#cccccc"
+            app:border_width="2dp"
+            android:layout_gravity="center_vertical"
+            app:shadow="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/pf_name"
+            android:text="Welcome"
+            android:textStyle="bold"
+            android:textColor="#e3dcd4"
+            android:textSize="16dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_below="@+id/pf_pic"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/log_out_btn"
+            android:layout_centerHorizontal="true"
+            android:text="Log Out"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:layout_below="@+id/pf_name"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nav_header_container"
+        android:background="#ffffff"
+        android:layout_marginTop="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:background="#dedcdd"
+        android:visibility="gone"
+        android:layout_below="@+id/drawerList">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="#ffffff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#757a7e"
+            android:drawableLeft="@drawable/home"
+            android:drawablePadding="5dp"
+            android:id="@+id/nav_home"
+            android:textSize="13sp"
+            android:text="HOME"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="#ffffff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#757a7e"
+            android:drawableLeft="@drawable/shop"
+            android:drawablePadding="5dp"
+            android:id="@+id/nav_shop"
+            android:textSize="13sp"
+            android:text="SHOP"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="#ffffff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#757a7e"
+            android:drawableLeft="@drawable/account"
+            android:drawablePadding="5dp"
+            android:id="@+id/nav_account"
+            android:textSize="13sp"
+            android:text="ACCOUNT"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="#ffffff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#757a7e"
+            android:drawableLeft="@drawable/more"
+            android:drawablePadding="5dp"
+            android:id="@+id/nav_more"
+            android:textSize="13sp"
+            android:text="MORE"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

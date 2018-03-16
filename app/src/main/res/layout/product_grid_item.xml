@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="170dp"
+    android:layout_height="220dp"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_margin="5dp"
+    android:elevation="6dp"
+    android:padding="5dp" >
+
+    <!--<ImageView
+        android:id="@+id/ProductImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:src="@drawable/dress_temp">
+    </ImageView>-->
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/ProductImage"
+        android:layout_gravity="center"
+        android:src="@drawable/dress_temp"/>
+
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="40dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/ProductImage">
+
+        <TextView
+            android:id="@+id/ProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Simple black shirt"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textSize="12sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/ProductSalesPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ProductName"
+            android:text="Rs. 120.00"
+            android:gravity="center_vertical"
+            android:textColor="#f85534"
+            android:textSize="12sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/ProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 150.00"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            android:paddingLeft="10dp"
+            android:layout_below="@+id/ProductName"
+            android:textColor="#aba5a5"
+            android:breakStrategy="balanced"
+            android:layout_toEndOf="@+id/ProductSalesPrice">
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btn_wish"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:backgroundTint="#6F736F"
+        android:background="@drawable/favourite_50"/>
+
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:text="3.5 *"
+        android:textSize="9sp"
+        android:visibility="visible"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="#7fd654"
+        android:layout_alignParentBottom="true"/>
+
+<!-- android:background="@drawable/ic_add_shopping_cart_black_24dp"-->
+
+</RelativeLayout>

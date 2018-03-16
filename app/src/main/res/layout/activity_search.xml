@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lnsel.ecommerceapp.activity.SearchActivity">
+
+    <include layout="@layout/header"/>
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:background="@drawable/ractangle_box"
+        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:hint="search"
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:layout_height="40dp" />
+
+</LinearLayout>
